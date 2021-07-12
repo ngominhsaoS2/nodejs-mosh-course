@@ -190,3 +190,16 @@ Then, instead of "node index.js" we run "nodemon index.js"
 export PORT=3001 :to set a environment variable names "PORT" value 3001 in Mac.
 set PORT=3001 :to do the same in Windows
 
+
+
+47. Route Parameters
+app.get('/api/courses/:year/:month', (req, res) => {
+    res.send(req.params);
+}); // result would be {"year":"1995","month":"01"}
+
+We use Route Parameters for mandatory parameters.
+We can also use query string parameters to provide additionals data.
+    Then use req.query to access these parameters.
+
+
+
