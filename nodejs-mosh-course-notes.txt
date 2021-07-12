@@ -67,7 +67,8 @@ When a function is inside a class, it is called method.
 
 
 
-
+22. HTTP Module
+const server = http.createServer(); :server is exact EventEmitter.
 
 
 
