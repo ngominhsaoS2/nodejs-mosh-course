@@ -62,6 +62,13 @@ We can pass data when emit even.
 
 
 
+21. Extending Event Emitter
+When a function is inside a class, it is called method.
+
+
+
+
+
 
 
 
