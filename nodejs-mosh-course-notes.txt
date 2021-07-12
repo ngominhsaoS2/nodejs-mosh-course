@@ -107,3 +107,10 @@ major.minor.patch is called Semantic Version
 
 ^5.13.2 equals to 5.x.y
 ~5.13.2 equals to 5.13.x
+
+
+
+31. Listing the Installed Packages
+npm list :to list out exact version of installed packages.
+npm list --depth=0 :just list out version of your app dependencies.
+
