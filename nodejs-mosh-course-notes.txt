@@ -20,3 +20,18 @@ In NodeJs, every file can be considered as a module.
 14. Loading a Module
 Use const logger = require('./logger'); instead of using var.
 Because we dont want to accidentally change the logger variable.
+
+
+
+15. Module Wrapper Function
+In logger.js file, Node actually does not execute the code. Instead, Node wraps
+everything in side the file into a function like below:
+
+(function (exports, require, module, __filename, __dirname) {
+    // code inside js file go here
+    ...
+})
+
+This function is called "Module Wrapper Function"
+
+

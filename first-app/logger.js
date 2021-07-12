@@ -1,3 +1,5 @@
+console.log({ __filename, __dirname });
+
 var url = 'http://mylogger.io/blog';
 
 function log(message) {
@@ -7,6 +9,4 @@ function log(message) {
     console.log(message);
 }
 
-module.exports.log = log;
-module.exports.url = url;
-module.exports.endpoint = url;
+module.exports = log;
