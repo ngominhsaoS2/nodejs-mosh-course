@@ -46,3 +46,11 @@ This function is called "Module Wrapper Function"
 
 18. File System Module
 
+
+
+19. Events Module
+Event is a signal that something has happened.
+
+const EventEmitter = require('events'); :EventEmitter uppcase like this means this EventEmitter is a Class.
+It's not a function, not a simple value, it's a class. Class contains properties, methods.
+We have to create an instance of that class.
