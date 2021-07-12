@@ -128,4 +128,14 @@ npm i <package>@x.y.z
 
 
 
+34. Updating Local Packages
+npm outdated :to list out outdated packages.
+npm update :to update outdated packages, but it just works for minor and patch outdated packages.
+npm i -g npm-check-updates :to install a package just for checking packages updates.
+    then run command "npm-check-updates"
+
+ncu for shorthand.
+ncu -u to upgrade package.json file. This command just upgrade the file, but does not install the new version yet.
+    We have to run npm i again.
+
 
