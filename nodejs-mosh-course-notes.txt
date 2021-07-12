@@ -207,4 +207,12 @@ We can also use query string parameters to provide additionals data.
 
 
 
+49. Handling HTTP POST Requests
+req.body.name :by default, this function won't work, needs to use a middleware of Express.
+app.use(express.json()) :express.json() will return some middlewares, then our app uses these middlewares.
+
+
+
+
+
 
