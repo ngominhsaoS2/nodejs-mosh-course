@@ -186,3 +186,7 @@ Then, instead of "node index.js" we run "nodemon index.js"
 
 
 
+46. Environment Variables
+export PORT=3001 :to set a environment variable names "PORT" value 3001 in Mac.
+set PORT=3001 :to do the same in Windows
+
