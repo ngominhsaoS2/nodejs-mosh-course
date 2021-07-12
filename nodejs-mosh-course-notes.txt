@@ -161,3 +161,9 @@ npm -g outdated :to check outdated global packages.
 npm init --yes :remember to use the unique name for the package.
 npm login
 npm publish
+
+
+
+39. Updating a Published Package
+We can munuall update the package.json file or use command "npm version major/minor/patch"
+Then run "npm publish"
