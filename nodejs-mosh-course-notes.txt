@@ -142,3 +142,10 @@ ncu -u to upgrade package.json file. This command just upgrade the file, but doe
 
 35. DevDependencies
 npm i jshint --save-dev :to just save for development env.
+
+
+
+36. Uninstalling a Package
+npm un <packagename>
+
+
