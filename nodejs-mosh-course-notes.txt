@@ -102,5 +102,8 @@ Add .gitignore file.
 
 
 
+30. Semantic Versioning
+major.minor.patch is called Semantic Version
 
-
+^5.13.2 equals to 5.x.y
+~5.13.2 equals to 5.13.x
