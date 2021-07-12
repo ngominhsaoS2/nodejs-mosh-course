@@ -72,4 +72,8 @@ const server = http.createServer(); :server is exact EventEmitter.
 
 
 
+25. Package.json
+npm init :to create a package.json, then follow the instruction.
+This step must be done before creating any package on Node.
 
+npm init --yes :to setup default values for your answers.
