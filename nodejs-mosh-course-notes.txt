@@ -97,7 +97,8 @@ Priorities to load a module:
 
 
 
-
+29. NPM Packages and Source Control
+Add .gitignore file.
 
 
 
