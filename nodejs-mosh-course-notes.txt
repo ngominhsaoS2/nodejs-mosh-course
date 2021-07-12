@@ -179,3 +179,10 @@ npm i express
 44. Building Your First Web Server
 
 
+
+45. Nodemon
+npm i -g nodemon :to install nodemon (Node Monitor)
+Then, instead of "node index.js" we run "nodemon index.js"
+
+
+
