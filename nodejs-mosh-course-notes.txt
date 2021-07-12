@@ -12,3 +12,11 @@ console.log(module);
 In NodeJs, every file can be considered as a module.
 
 
+
+13. Creating a Module
+
+
+
+14. Loading a Module
+Use const logger = require('./logger'); instead of using var.
+Because we dont want to accidentally change the logger variable.
