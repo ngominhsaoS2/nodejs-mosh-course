@@ -1,1 +1,6 @@
-//
+11. Global Object
+console is one of the global objects in JavaScript. NodeJs also has other global objects.
+setTimeout(), clearTimeout(), setInterval(), clearInterval()...
+
+On NodeJS, we dont have "window" global object, instead we have "global" as global object.
+console.log(global.message) will return undefined.
