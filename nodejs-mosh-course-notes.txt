@@ -156,3 +156,8 @@ npm un -g <packagename> :to uninstall a package globally.
 npm -g outdated :to check outdated global packages.
 
 
+
+38. Publishing a Package
+npm init --yes :remember to use the unique name for the package.
+npm login
+npm publish
