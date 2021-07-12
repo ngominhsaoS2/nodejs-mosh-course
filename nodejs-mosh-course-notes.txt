@@ -122,3 +122,10 @@ npm view <packagename> dependencies :to view the package's dependencies.
 npm view <packagename> versions :to view the package's release notes.
 
 
+
+33. Installing a Specific Version of a Package
+npm i <package>@x.y.z
+
+
+
+
