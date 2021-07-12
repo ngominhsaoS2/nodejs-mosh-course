@@ -84,3 +84,15 @@ npm init --yes :to setup default values for your answers.
 npm i underscore 
 
 
+
+27. Using a Package
+Priorities to load a module:
+    - core modules
+    - file or folder
+    - node_modules
+
+
+
+
+
+
