@@ -4,3 +4,11 @@ setTimeout(), clearTimeout(), setInterval(), clearInterval()...
 
 On NodeJS, we dont have "window" global object, instead we have "global" as global object.
 console.log(global.message) will return undefined.
+
+
+
+12. Modules
+console.log(module);
+In NodeJs, every file can be considered as a module.
+
+
