@@ -149,3 +149,10 @@ npm i jshint --save-dev :to just save for development env.
 npm un <packagename>
 
 
+
+37. Working with Global Packages
+npm i -g <packagename> :to install a package globally.
+npm un -g <packagename> :to uninstall a package globally.
+npm -g outdated :to check outdated global packages.
+
+
