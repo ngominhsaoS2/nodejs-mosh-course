@@ -236,3 +236,10 @@ npm i joi@13.1.0
 
 58. Creating Custom Middleware
 Middlewares are called in sequence.
+
+
+
+59. Built-In Middleware
+app.use(express.static('public')); to searve static contents.
+
+
