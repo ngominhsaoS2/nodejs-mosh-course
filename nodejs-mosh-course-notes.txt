@@ -326,3 +326,8 @@ List of type when define properties on schemas:
 
 
 
+87. Models
+const Course = mongoose.model('Course', courseSchema);
+The const Course here is a Class.
+
+
