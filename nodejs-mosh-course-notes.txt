@@ -272,3 +272,13 @@ export DEBUG=app:startup,app:db // multiple namespaces
 export DEBUG=app:* // wildcard
 
 DEBUG=app:db nodemon index.js
+
+
+
+64. Templating Engines
+pug / jade
+mustache
+EJS
+
+app.set('view engine', 'pug'); express will load this pug module, so we dont have to require it.
+

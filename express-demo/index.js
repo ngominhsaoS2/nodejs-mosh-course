@@ -11,6 +11,9 @@ const dbDebugger = require('debug')('app:db');
 // console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 // console.log(`app: ${app.get('env')}`); // will return "development" if NODE_ENV is undefined
 
+app.set('view engine', 'pug');
+app.set('views', './views'); // default
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
@@ -43,7 +46,7 @@ const courses = [
 ]
 
 app.get('/', (req, res) => {
-    res.send('Hello, world');
+    res.render('index', { title: 'My Express App', message: 'Hello World'});
 });
 
 app.get('/api/courses', (req, res) => {
