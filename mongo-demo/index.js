@@ -27,7 +27,7 @@ const courseSchema = new mongoose.Schema({
                     // Do some async work
                     const result = v && v.length > 0;
                     callback(result);
-                }, 3000);
+                }, 500);
             },
             message: 'The course should have at least one tag.'
         }
@@ -49,7 +49,7 @@ const Course = mongoose.model('Course', courseSchema);
 async function createCourse() {
     const course = new Course({
         name: 'VueJs course',
-        category: 'web',
+        category: '-',
         author: 'saonm',
         tags: null,
         isPublished: true,
@@ -60,7 +60,9 @@ async function createCourse() {
         const result = await course.save();
         console.log(result);
     } catch (ex) {
-        console.log(ex.message);
+        for (field in ex.errors) {
+            console.log(ex.errors[field].message);
+        }
     }
 }
 
