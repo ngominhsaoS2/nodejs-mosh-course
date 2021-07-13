@@ -331,3 +331,9 @@ const Course = mongoose.model('Course', courseSchema);
 The const Course here is a Class.
 
 
+
+88. Saving a Document
+
+
+
+
