@@ -339,3 +339,26 @@ The const Course here is a Class.
 89. Querying Documents
 
 
+
+90. Comparison Query Operators
+    - eq :equal
+    - ne :not equal
+    - gt :greater than
+    - gte :greater than or equal
+    - lt :less than
+    - lte :less than or equal
+    - in
+    - nin :not in
+
+eg: find({ price: { $gt: 10 } })
+    find({ price: { $gte: 10, $lte: 20 } })
+    find({ price: { $in: [10, 15, 20] } })
+
+
+
+
+
+
+
+
+
