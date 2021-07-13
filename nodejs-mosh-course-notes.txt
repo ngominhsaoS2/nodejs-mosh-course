@@ -380,3 +380,8 @@ eg: or([ { author: 'saonm' }, { isPublished: true} ])
 
 
 
+98. Updating Documents- Query First
+Query first
+Update first
+
+
