@@ -1,8 +1,16 @@
 const express = require('express');
 const app = express();
 const Joi = require('joi'); // this is a class
+const logger = require('./logger');
 
 app.use(express.json());
+
+app.use(logger);
+
+app.use(function(req, res, next) {
+    console.log('Authenticating...');
+    next();
+});
 
 const courses = [
     { id: 1, name: 'NodeJs' },
