@@ -311,3 +311,18 @@ brew.sh - this is Homebrew, package manager for MacOS.
 
 85. Connecting to MongoDB
 npm in mongoose@5.0.1
+
+
+
+86. Schemas
+List of type when define properties on schemas:
+    - String
+    - Number
+    - Date
+    - Buffer (to store binary data)
+    - Boolean
+    - ObjectID
+    - Array
+
+
+
