@@ -5,22 +5,42 @@ mongoose.connect('mongodb://localhost/playground')
     .catch(err => console.error('Could not connect to Mongodb: ', err));
 
 const courseSchema = new mongoose.Schema({
-    name: { type: String, required: true },
+    name: { 
+        type: String,
+        required: true,
+        minlength: 5,
+        maxlength: 255,
+        //match: /some-pattern/
+    },
+    category: {
+        type: String,
+        required: true,
+        enum: ['web', 'mobile', 'network']
+    },
     author: String,
     tags: [String],
     date: { type: Date, default: Date.now },
     isPublished: Boolean,
-    price: Number,
+    price: { 
+        type: Number,
+        required: function() { // can not use arrow function
+            return this.isPublished;
+        },
+        min: 10,
+        max: 200
+    },
 });
 
 const Course = mongoose.model('Course', courseSchema);
 
 async function createCourse() {
     const course = new Course({
-        //name: 'VueJs course',
+        name: 'VueJs course',
+        category: '--',
         author: 'saonm',
         tags: ['vue', 'frontend'],
-        isPublished: true
+        isPublished: true,
+        price: 10
     });
 
     try {
