@@ -28,12 +28,10 @@ async function createCourse() {
 
 async function getCourses() {
     const courses = await Course
-        //.find({ author: /^sao/ }) // Starts with sao
-        //.find({ author: /m$/i }) // Ends with sao, 
         .find({ author: /.*sao.*/i }) // Contains with sao
-        .limit(2)
+        .limit(10)
         .sort({ name: 1 }) // 1 asc -1 desc
-        .select({ name: 1, tags: 1})
+        .count()
     console.log(courses);
 }
 
