@@ -5,25 +5,30 @@ mongoose.connect('mongodb://localhost/playground')
     .catch(err => console.error('Could not connect to Mongodb: ', err));
 
 const courseSchema = new mongoose.Schema({
-    name: String,
+    name: { type: String, required: true },
     author: String,
     tags: [String],
     date: { type: Date, default: Date.now },
     isPublished: Boolean,
+    price: Number,
 });
 
 const Course = mongoose.model('Course', courseSchema);
 
 async function createCourse() {
     const course = new Course({
-        name: 'VueJs course',
+        //name: 'VueJs course',
         author: 'saonm',
         tags: ['vue', 'frontend'],
         isPublished: true
     });
-    
-    const result = await course.save();
-    console.log(result);
+
+    try {
+        const result = await course.save();
+        console.log(result);
+    } catch (ex) {
+        console.log(ex.message);
+    }
 }
 
 async function getCourses() {
@@ -77,6 +82,6 @@ async function removeCourse(id) {
     console.log(course);
 }
 
-removeCourse('60ed769a4031305fe4799cbb');
+createCourse();
 
 
