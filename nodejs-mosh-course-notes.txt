@@ -262,5 +262,13 @@ Instead, we store them in environment variables.
 
 
 
+63. Debugging
+const startupDebugger = require('debug')('app:startup');
 
+app:startup is a namespace that needs to be debugged.
 
+export DEBUG=app:startup // one namespace
+export DEBUG=app:startup,app:db // multiple namespaces
+export DEBUG=app:* // wildcard
+
+DEBUG=app:db nodemon index.js

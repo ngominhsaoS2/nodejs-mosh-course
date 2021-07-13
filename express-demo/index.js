@@ -5,6 +5,8 @@ const logger = require('./logger');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const config = require('config');
+const startupDebugger = require('debug')('app:startup');
+const dbDebugger = require('debug')('app:db');
 
 // console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 // console.log(`app: ${app.get('env')}`); // will return "development" if NODE_ENV is undefined
@@ -21,8 +23,11 @@ console.log(`Mail password: ${config.get('mail.password')}`);
 
 if (app.get('env') === 'development') {
     app.use(morgan('tiny'));
-    console.log('morgan enabled.');
+    startupDebugger('morgan enabled.');
 }
+
+// DB work...
+dbDebugger('Connected to the database...');
 
 app.use(logger);
 
