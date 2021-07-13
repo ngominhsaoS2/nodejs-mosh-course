@@ -72,6 +72,11 @@ async function updateCourse_3(id) {
     console.log(course); // course here is updated document
 }
 
-updateCourse_3('60ed769a4031305fe4799cbb');
+async function removeCourse(id) {
+    const course = await Course.findByIdAndRemove(id);
+    console.log(course);
+}
+
+removeCourse('60ed769a4031305fe4799cbb');
 
 

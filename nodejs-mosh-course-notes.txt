@@ -390,3 +390,8 @@ Update first
 https://docs.mongodb.com/manual/reference/operator/update/
 
 { n: 1, nModified: 1, ok: 1 }
+
+
+
+100. Removing Documents
+findByIdAndRemove will return null if it does not find any matching document.
