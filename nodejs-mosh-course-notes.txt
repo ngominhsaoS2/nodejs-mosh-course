@@ -365,7 +365,10 @@ eg: or([ { author: 'saonm' }, { isPublished: true} ])
 
 
 
-
+92. Regular Expressions
+.find({ author: /^sao/ }) // Starts with sao
+.find({ author: /m$/i }) // Ends with sao, i is in-casesensitive
+.find({ author: /.*sao.*/i }) // Contains with sao
 
 
 

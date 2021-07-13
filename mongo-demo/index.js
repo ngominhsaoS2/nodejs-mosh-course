@@ -28,8 +28,9 @@ async function createCourse() {
 
 async function getCourses() {
     const courses = await Course
-        .find()
-        .or([ { author: 'saonm' }, { isPublished: true} ])
+        //.find({ author: /^sao/ }) // Starts with sao
+        //.find({ author: /m$/i }) // Ends with sao, 
+        .find({ author: /.*sao.*/i }) // Contains with sao
         .limit(2)
         .sort({ name: 1 }) // 1 asc -1 desc
         .select({ name: 1, tags: 1})
