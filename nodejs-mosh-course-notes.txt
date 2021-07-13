@@ -290,3 +290,8 @@ app.set('view engine', 'pug'); express will load this pug module, so we dont hav
 
 66. Authentication
 
+
+
+67. Structuring Express Applications
+
+
