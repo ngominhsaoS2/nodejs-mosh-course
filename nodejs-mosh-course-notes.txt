@@ -241,5 +241,12 @@ Middlewares are called in sequence.
 
 59. Built-In Middleware
 app.use(express.static('public')); to searve static contents.
+http://localhost:3000/readme.txt to check.
+
+
+
+60. Third-party Middleware
+Use many middlewares might effect the performance of the app. So be careful when using them.
+
 
 

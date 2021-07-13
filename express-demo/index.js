@@ -2,10 +2,14 @@ const express = require('express');
 const app = express();
 const Joi = require('joi'); // this is a class
 const logger = require('./logger');
+const helmet = require('helmet');
+const morgan = require('morgan');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use(helmet());
+app.use(morgan('tiny'));
 
 app.use(logger);
 
