@@ -356,6 +356,13 @@ eg: find({ price: { $gt: 10 } })
 
 
 
+91. Logical Query Operators
+    - or
+    - and
+
+eg: or([ { author: 'saonm' }, { isPublished: true} ])
+    and([ { author: 'saonm' }, { isPublished: true} ])
+
 
 
 
