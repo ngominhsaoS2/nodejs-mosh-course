@@ -40,16 +40,38 @@ async function getCourses() {
 }
 
 async function updateCourse(id) {
-    const course = await Course.findById(id);
-    if (!course) return;
-
-    course.isPublished = false;
-    course.author = 'saonm updated';
-
-    const result = await course.save();
+    const result = await Course.update({ _id: id }, {
+        $set: {
+            author: 'saonm updated twice',
+            isPublished: true,
+        }
+    });
+    
     console.log(result);
 }
 
-updateCourse('60ed769a4031305fe4799cbb');
+async function updateCourse_2(id) {
+    const course = await Course.findByIdAndUpdate(id, {
+        $set: {
+            author: 'saonm updated 3 times',
+            isPublished: true,
+        }
+    });
+    
+    console.log(course); // course here is original document
+}
+
+async function updateCourse_3(id) {
+    const course = await Course.findByIdAndUpdate(id, {
+        $set: {
+            author: 'saonm updated 3 times',
+            isPublished: true,
+        }
+    }, { new: true });
+    
+    console.log(course); // course here is updated document
+}
+
+updateCourse_3('60ed769a4031305fe4799cbb');
 
 

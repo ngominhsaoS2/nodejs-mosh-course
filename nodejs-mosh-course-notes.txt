@@ -385,3 +385,8 @@ Query first
 Update first
 
 
+
+99. Updating a Document- Update First
+https://docs.mongodb.com/manual/reference/operator/update/
+
+{ n: 1, nModified: 1, ok: 1 }
