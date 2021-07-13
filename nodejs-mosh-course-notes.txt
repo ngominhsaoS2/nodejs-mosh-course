@@ -254,4 +254,13 @@ Use many middlewares might effect the performance of the app. So be careful when
 
 
 
+62. Configuration
+We should not store passwords and secret keys in config/<env>.json files.
+Instead, we store them in environment variables.
+    export <prefix>_<name_of_key>=something
+    eg: export app_password=hehehe
+
+
+
+
 

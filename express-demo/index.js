@@ -4,6 +4,7 @@ const Joi = require('joi'); // this is a class
 const logger = require('./logger');
 const helmet = require('helmet');
 const morgan = require('morgan');
+const config = require('config');
 
 // console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 // console.log(`app: ${app.get('env')}`); // will return "development" if NODE_ENV is undefined
@@ -12,6 +13,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(helmet());
+
+// Configuration
+console.log(`Application name: ${config.get('name')}`);
+console.log(`Mail host: ${config.get('mail.host')}`);
+console.log(`Mail password: ${config.get('mail.password')}`);
 
 if (app.get('env') === 'development') {
     app.use(morgan('tiny'));

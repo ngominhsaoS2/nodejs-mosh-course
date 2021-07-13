@@ -1,0 +1,6 @@
+{
+    "name": "Saonm Express App - Dev env",
+    "mail": {
+        "host": "dev-mail-server"
+    }
+}
