@@ -431,3 +431,11 @@ findByIdAndRemove will return null if it does not find any matching document.
 
 
 110. Restructuring the Project
+
+
+
+112. Modelling Relationships
+- using references (normalization)
+- using Embedded Documents (Denormalization)
+- hybrid way
+
