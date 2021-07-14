@@ -42,12 +42,15 @@ async function createCourse(name, author) {
 async function listCourses() { 
   const courses = await Course
     .find()
-    .select('name');
+    //.populate('author') // include all properties of author document
+    .populate('author', 'name -_id') // just get name property and exclude _id property of author document
+    .populate('category', 'name')
+    .select('name author');
   console.log(courses);
 }
 
 //createAuthor('Mosh', 'My bio', 'My Website');
 
-createCourse('Node Course', '60eebfdcc34b4b580d34c42d')
+//createCourse('Node Course', '60eebfdcc34b4b580d34c42d')
 
-// listCourses();
+listCourses();
